@@ -66,3 +66,9 @@
   color: #3b3566;
   font-size: 30px;
 }
+
+.source-code {
+  width: 90%;
+  max-width: 500px;
+  margin: -20px auto;
+}
