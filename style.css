@@ -1,0 +1,68 @@
+.card {
+  width: 90%;
+  max-width: 500px;
+  margin: 30px auto;
+}
+
+.search-engine {
+}
+
+.search-form {
+  width: 90%;
+  margin: 30px auto 10px;
+}
+
+.search-form-submit {
+  background: #e8ebed;
+  opacity: 80%;
+  border: 1px solid #ced4d9;
+  margin-left: 15px;
+}
+
+.button-current {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.data {
+  width: 90%;
+  margin: 10px auto 30px;
+}
+
+.data_basic {
+  text-align: left;
+}
+
+.temperature-number {
+  font-size: 36px;
+  color: #0156b3;
+}
+
+.units {
+}
+
+.celsius-link {
+}
+
+.fahrenheit-link {
+}
+
+.data_plus {
+  text-align: right;
+  line-height: 1.7;
+  padding-top: 18px;
+  font-size: 14px;
+}
+
+.forecast {
+  width: 90%;
+  text-align: center;
+  margin-top: 0;
+  padding: 20px;
+}
+
+.icon {
+  color: #3b3566;
+  font-size: 30px;
+}

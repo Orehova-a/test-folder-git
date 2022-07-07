@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link href="src/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ce94a0d700.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="search-engine">
+          <form class="search-form">
+            <div class="input-group mb-3">
+              <input
+                type="search"
+                placeholder="Type a city"
+                class="form-control"
+                id="city-search"
+              />
+              <input
+                type="submit"
+                class="btn btn-outline-secondary search-form-submit"
+                value="🔎"
+              />
+            </div>
+          </form>
+          <button
+            type="submit"
+            class="btn btn-outline-primary search-form-submit button-current"
+          >
+            Current
+          </button>
+        </div>
+
+        <div class="data row">
+          <div class="data_basic col">
+            <h1 class="city">Kyiv</h1>
+            <h6 class="time">Tuesday 16:00</h6>
+            <div class="temperature">
+              <span class="temperature-number">23</span>
+              <span class="units">
+                <a class="celsius-link" href="#">°C</a> |
+                <a class="fahrenheit-link" href="#">°F</a>
+              </span>
+            </div>
+          </div>
+          <div class="data_plus col">
+            <p class="description">Description</p>
+            <p class="wind">Wind</p>
+            <p class="humidity">Humidity</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="card forecast">
+            <div class="row">
+              <div class="col-3">
+                <p class="day">Mon</p>
+                <i class="fa-solid fa-cloud icon"></i>
+                <p class="temperature_forecast"><strong>23°C</strong> 13°C</p>
+              </div>
+              <div class="col-3">
+                <p class="day">Tue</p>
+                <i class="fa-solid fa-cloud-showers-heavy icon"></i>
+                <p class="temperature_forecast"><strong>22°C</strong> 11°C</p>
+              </div>
+              <div class="col-3">
+                <p class="day">Wed</p>
+                <i class="fa-solid fa-sun icon"></i>
+                <p class="temperature_forecast"><strong>24°C</strong> 12°C</p>
+              </div>
+              <div class="col-3">
+                <p class="day">Thu</p>
+                <i class="fa-solid fa-bolt icon"></i>
+                <p class="temperature_forecast"><strong>18°C</strong> 9°C</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
