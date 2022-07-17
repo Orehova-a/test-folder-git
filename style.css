@@ -4,9 +4,6 @@
   margin: 30px auto;
 }
 
-.search-engine {
-}
-
 .search-form {
   width: 90%;
   margin: 30px auto 10px;
@@ -35,17 +32,21 @@
 }
 
 .temperature-number {
-  font-size: 36px;
+  font-size: 48px;
   color: #0156b3;
+  line-height: 1.2;
 }
 
 .units {
+  position: relative;
+  font-size: 16px;
+  top: -22px;
 }
 
-.celsius-link {
-}
-
-.fahrenheit-link {
+.temperature .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
 }
 
 .data_plus {

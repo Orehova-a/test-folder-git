@@ -18,6 +18,16 @@ function showCurrentWeather(response) {
   let humidity = response.data.main.humidity;
   let humidityCurrent = document.querySelector(".humidity");
   humidityCurrent.innerHTML = `Humidity: ${humidity}%`;
+
+  let icon = response.data.weather[0].icon;
+  let iconCurrent = document.querySelector(".icon-temperature");
+  iconCurrent.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${icon}@2x.png`
+  );
+  iconCurrent.setAttribute("alt", description);
+
+  celsiusTemperature = response.data.main.temp;
 }
 
 function showWeatherCity(event) {
@@ -82,20 +92,29 @@ let day = days[today.getDay()];
 
 date.innerHTML = `${day} ${hours}:${minutes}`;
 
-function celsiusClick(event) {
-  event.preventDefault();
-  let temperatureChange = document.querySelector(".temperature-number");
-  temperatureChange.innerHTML = "23";
-}
-
-let celsius = document.querySelector(".celsius-link");
-celsius.addEventListener("click", celsiusClick);
-
 function fahrenheitClick(event) {
   event.preventDefault();
+  celsius.classList.remove("active");
+  fahrenheit.classList.add("active");
+
   let temperatureChange = document.querySelector(".temperature-number");
-  temperatureChange.innerHTML = "46";
+  let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureChange.innerHTML = Math.round(fahrenheiTemperature);
 }
+
+function celsiusClick(event) {
+  event.preventDefault();
+  celsius.classList.add("active");
+  fahrenheit.classList.remove("active");
+
+  let temperatureChange = document.querySelector(".temperature-number");
+  temperatureChange.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
 
 let fahrenheit = document.querySelector(".fahrenheit-link");
 fahrenheit.addEventListener("click", fahrenheitClick);
+
+let celsius = document.querySelector(".celsius-link");
+celsius.addEventListener("click", celsiusClick);
