@@ -63,9 +63,8 @@
   padding: 20px;
 }
 
-.icon {
-  color: #3b3566;
-  font-size: 30px;
+.day {
+  margin: 0;
 }
 
 .source-code {
