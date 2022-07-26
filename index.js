@@ -43,6 +43,8 @@ function search(city) {
 function showWeatherCity(event) {
   event.preventDefault();
   let inputCityValue = document.querySelector("#city-search");
+  fahrenheit.classList.remove("active");
+  celsius.classList.add("active");
   search(inputCityValue.value);
 }
 
@@ -52,7 +54,8 @@ cityChange.addEventListener("submit", showWeatherCity);
 function currentPosition(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
-
+  fahrenheit.classList.remove("active");
+  celsius.classList.add("active");
   let units = "metric";
   let apiKey = "28cda8ce420e8c865f44239b3154e0ce";
   let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather";
@@ -112,11 +115,11 @@ function celsiusClick(event) {
 
 let celsiusTemperature = null;
 
-let fahrenheit = document.querySelector(".fahrenheit-link");
-fahrenheit.addEventListener("click", fahrenheitClick);
-
 let celsius = document.querySelector(".celsius-link");
 celsius.addEventListener("click", celsiusClick);
+
+let fahrenheit = document.querySelector(".fahrenheit-link");
+fahrenheit.addEventListener("click", fahrenheitClick);
 
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
